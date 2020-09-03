@@ -1,0 +1,18 @@
+---
+- name: Install gpg related packages
+  apt:
+    name: "{{ boxes_gpg_package_name }}"
+  loop_control:
+    loop_var: boxes_gpg_package_name
+  loop:
+    - haveged
+    - rng-tools
+    - dieharder
+    - gnupg
+    - kleopatra
+
+- name: Enable haveged service
+  service:
+    name: haveged
+    enabled: true
+    state: started
