@@ -1,0 +1,8 @@
+---
+fullname: jvautier/ansible-role-gpg
+description: Install gpg utilities through ansible
+tags:
+  - ansible
+  - ansible-role
+  - gpg
+github: {}
